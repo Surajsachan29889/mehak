@@ -60,7 +60,7 @@ app.get('/', (req, res) => {
     res.send("Codequest is running perfect")
 })
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 const database_url = process.env.MONGODB_URL
 
 mongoose.connect(database_url)
