@@ -21,8 +21,8 @@ const server = http.createServer(app);
 // Initialize Socket.IO with the server instance
 const io = new Server(server, {
     cors: {
-        origin: process.env.CLIENT_URL || "http://localhost:3000", // Use environment variable for production
-        methods: ["GET", "POST"],
+        origin: "*", // Use environment variable for production
+        methods: ["GET", "POST", "PATCH"],
     },
 });
 app.use(cors());
